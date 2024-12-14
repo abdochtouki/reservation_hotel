@@ -1,18 +1,25 @@
-Réservation Hôtel - Application
+# Réservation Hôtel - Application
+
 Cette application permet de gérer les réservations d'hôtel avec un backend Spring Boot, un frontend Angular, et une base de données MySQL.
 
-Prérequis
+## Prérequis
+
 Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
-Java 11+ : pour exécuter le backend Spring Boot
-Maven : pour gérer les dépendances du projet Spring Boot
-Node.js et npm : pour le frontend Angular
-MySQL : pour la base de données
-Installation
-1. Backend (Spring Boot)
-a) Créer la base de données
-Assurez-vous que MySQL est installé et en cours d'exécution sur votre machine. Ensuite, créez la base de données reservation_hotel avec la commande suivante dans MySQL :
+- **Java 11+** : pour exécuter le backend Spring Boot
+- **Maven** : pour gérer les dépendances du projet Spring Boot
+- **Node.js et npm** : pour le frontend Angular
+- **MySQL** : pour la base de données
 
+## Installation
+
+### 1. Backend (Spring Boot)
+
+#### a) Créer la base de données
+
+Assurez-vous que MySQL est installé et en cours d'exécution sur votre machine. Ensuite, créez la base de données `reservation_hotel` avec la commande suivante dans MySQL :
+
+```sql
 CREATE DATABASE reservation_hotel;
 b) Insérer un utilisateur admin par défaut
 Un utilisateur admin sera automatiquement inséré dans la base de données lors du démarrage du backend grâce à une classe CommandLineRunner dans Spring Boot.
