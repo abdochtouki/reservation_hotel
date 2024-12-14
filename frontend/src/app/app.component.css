@@ -1,0 +1,83 @@
+.main-layout {
+  min-height: 100vh;
+}
+
+.side-menu {
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #62a1f3; /* Dark teal background for the sidebar */
+  color: #fff; /* White text for better readability */
+}
+
+.side-menu .logo {
+  padding: 20px;
+  background: #62a1f3; /* Olive green background for the logo area */
+  color: #fff;
+  text-align: center;
+}
+
+.side-menu .logo h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content {
+  margin-left: 200px; /* Correspond to the width of the sidebar */
+  padding: 24px;
+  background: #f4f7fb; /* Light blue background for the content area */
+  min-height: calc(100vh - 64px); /* Adjust height based on footer */
+}
+
+.footer {
+  text-align: center;
+  background: #62a1f3; /* Darker background for footer */
+  color: #fff;
+  padding: 12px 0;
+}
+
+/* Container for the logo and text */
+.logo {
+  display: flex;
+  align-items: center;  /* Align items vertically in the center */
+  gap: 10px;  /* Space between the logo and the text */
+}
+
+/* Styling for the logo image */
+.logo img {
+  width: 50px;  /* Set width of the logo */
+  height: 50px;  /* Set height of the logo */
+  object-fit: cover;  /* Ensures the image fills the box without distorting */
+  border-radius: 50%;  /* Optional: makes the logo round */
+}
+
+/* Styling for the h2 */
+.logo h2 {
+  color: #fff;  /* Ensure text remains readable on the logo background */
+  font-size: 24px;  /* Set font size */
+  margin: 0;  /* Remove default margin */
+}
+
+/* Menu Items */
+nz-menu {
+  background-color: #62a1f3; /* Match sidebar background */
+}
+
+nz-menu nz-menu-item {
+  color: #fff; /* White text for menu items */
+}
+
+nz-menu nz-menu-item:hover {
+  background-color: #62a1f3; /* Light green highlight on hover */
+}
+
+/* Active menu item */
+nz-menu nz-menu-item[selected] {
+  background-color: #62a1f3; /* Active item background */
+}
+
+nz-icon {
+  color: #fff; /* White color for icons */
+}

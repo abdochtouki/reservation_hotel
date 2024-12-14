@@ -1,0 +1,64 @@
+.room-details-form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #ffffff; /* White background */
+}
+
+.form-title {
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: bold; /* Bold font */
+  margin-bottom: 20px; /* Space below the title */
+  text-align: center; /* Center the title */
+}
+
+.nz-form-item {
+  margin-bottom: 15px; /* Space between form items */
+}
+
+.nz-form-control {
+  display: flex; /* Use flexbox for better alignment */
+  align-items: center; /* Center items vertically */
+}
+
+input[nz-input] {
+  width: 100%; /* Full width for input fields */
+  padding: 10px; /* Padding inside the input fields */
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px; /* Rounded corners for inputs */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input[nz-input]:focus {
+  border-color: #f1be39; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+button[nz-button] {
+  margin-top: 20px;
+  background-color: #f1be39;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100px;
+}
+
+button[nz-button]:hover {
+  background-color: #0a2644;
+}
+
+.nz-form-label {
+  display: flex; /* Flexbox for better alignment */
+  justify-content: center; /* Center the button */
+}
+
+.nz-form-item-control {
+  display: flex; /* Flexbox for better alignment */
+  justify-content: center; /* Center the controls */
+}

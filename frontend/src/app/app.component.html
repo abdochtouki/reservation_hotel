@@ -1,0 +1,66 @@
+<nz-layout class="main-layout">
+  <!-- Menu latéral -->
+  <nz-sider nzCollapsible nzWidth="200px" class="side-menu">
+    <div class="logo">
+      <img src="../assets/logo.jpeg" alt="logo">
+      <h2 style="color: #f1f1f1">Hotel ESTSB</h2>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <!-- Menu pour utilisateurs non connectés -->
+      <ng-container *ngIf="!isAdminLoggedIn && !isCustomerLoggedIn">
+        <li nz-menu-item routerLink="/register">
+          <span nz-icon nzType="user"></span>
+          <span><strong>Register</strong></span>
+        </li>
+        <li nz-menu-item routerLink="/login">
+          <span nz-icon nzType="login"></span>
+          <span><strong>Login</strong></span>
+        </li>
+      </ng-container>
+
+      <!-- Menu pour administrateurs -->
+      <ng-container *ngIf="isAdminLoggedIn">
+        <li nz-menu-item routerLink="/admin/room">
+          <span nz-icon nzType="apartment"></span>
+          <span><strong>Add Room</strong></span>
+        </li>
+        <li nz-menu-item routerLink="/admin/rooms">
+          <span nz-icon nzType="apartment"></span>
+          <span><strong>Rooms</strong></span>
+        </li>
+        <li nz-menu-item routerLink="/admin/reservations">
+          <span nz-icon nzType="pull-request"></span>
+          <span><strong>Reservations</strong></span>
+        </li>
+        <li nz-menu-item (click)="logout()">
+          <span nz-icon nzType="logout"></span>
+          <span><strong>Logout</strong></span>
+        </li>
+      </ng-container>
+
+      <!-- Menu pour clients -->
+      <ng-container *ngIf="isCustomerLoggedIn">
+        <li nz-menu-item routerLink="/customer/rooms">
+          <span nz-icon nzType="apartment"></span>
+          <span><strong>Rooms</strong></span>
+        </li>
+        <li nz-menu-item routerLink="/customer/bookings">
+          <span nz-icon nzType="pull-request"></span>
+          <span><strong>Bookings</strong></span>
+        </li>
+        <li nz-menu-item (click)="logout()">
+          <span nz-icon nzType="logout"></span>
+          <span><strong>Logout</strong></span>
+        </li>
+      </ng-container>
+    </ul>
+  </nz-sider>
+
+  <!-- Main Content -->
+  <nz-layout>
+    <nz-content class="content">
+      <router-outlet></router-outlet> <!-- Displays components based on the route -->
+    </nz-content>
+  </nz-layout>
+
+</nz-layout>

@@ -1,0 +1,62 @@
+<div class="center-form">
+  <button nz-button nzType="primary" class="post-room-btn" routerLink="/admin/room">
+    Post Room
+  </button>
+
+  <!-- Room container -->
+  <div class="room-container">
+    <div class="room-row" *ngFor="let room of rooms">
+      <nz-card style="width: 300px; margin: 16px;" [nzActions]="[actionEdit, actionDelete]">
+        <nz-skeleton
+          [nzActive]="true"
+          [nzLoading]="loading"
+          [nzAvatar]="false"
+        >
+          <div class="room-image-container">
+            <img [src]="getImageForRoom(room.type)" alt="Room Image" class="room-image" />
+          </div>
+
+          <div class="room-info">
+            <nz-card-meta
+              [nzTitle]="room.name"
+              [nzDescription]="'Type: ' + room.type"
+            ></nz-card-meta>
+            <nz-card-meta
+              style="margin-top: 8px;"
+              [nzDescription]="'Price: ' + room.price + ' DH'"
+            ></nz-card-meta>
+          </div>
+        </nz-skeleton>
+      </nz-card>
+
+      <ng-template #actionEdit>
+        <span
+          nz-icon
+          nzType="edit"
+          [nzTheme]="'twotone'"
+          class="icon"
+          routerLink="/admin/room/{{room.id}}/edit"
+        ></span>
+      </ng-template>
+      <ng-template #actionDelete>
+        <span
+          nz-icon
+          nzType="delete"
+          [nzTheme]="'twotone'"
+          class="icon"
+          [nzTwotoneColor]="'#FF0000'"
+          (click)="showConfirm(room.id)"
+        ></span>
+      </ng-template>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <nz-pagination
+      [nzPageIndex]="currentPage"
+      [nzTotal]="total"
+      [nzPageSize]="1"
+      (nzPageIndexChange)="pageIndexChange($event)"
+    ></nz-pagination>
+  </div>
+</div>

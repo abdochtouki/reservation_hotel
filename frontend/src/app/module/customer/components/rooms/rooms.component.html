@@ -1,0 +1,76 @@
+<div class="center-form">
+  <div class="room-container">
+    <div class="room-row" *ngFor="let room of rooms">
+      <nz-card style="width: 300px; margin: 16px;" [nzActions]="[actionEdit]">
+        <nz-skeleton
+          [nzActive]="true"
+          [nzLoading]="loading"
+          [nzAvatar]="{ size: 'large' }"
+        >
+          <div class="room-image-container">
+            <!-- Rectangle Image with Text at Bottom -->
+            <div class="room-image-container">
+              <img [src]="getImageForRoom(room.type)" alt="Room Image" class="room-image" />
+            </div>
+            <div class="room-text">
+              <nz-card-meta
+                [nzTitle]="room.name"
+                [nzDescription]="'Type: ' + room.type"
+              ></nz-card-meta>
+              <nz-card-meta
+                [nzDescription]="'Price: ' + room.price"
+                style="margin-left: 0;"
+              ></nz-card-meta>
+            </div>
+          </div>
+        </nz-skeleton>
+      </nz-card>
+
+      <ng-template #actionEdit>
+        <span nz-icon nzType="check-square" [nzTheme]="'twotone'" class="icon" (click)="showModalMiddle(room.id)"></span>
+      </ng-template>
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="pagination">
+    <nz-pagination [nzPageIndex]="currentPage" [nzTotal]="total" [nzPageSize]="1"
+                   (nzPageIndexChange)="pageIndexChange($event)"
+    ></nz-pagination>
+  </div>
+</div>
+
+<!-- Modal for Booking -->
+<nz-modal nzTitle="Book Room" nzCentered [(nzVisible)]="isVisibleMiddle" (nzOnCancel)="handleCancelMiddle()"
+          (nzOnOk)="handleOkMiddle()">
+  <ng-container *nzModalContent>
+    <div class="modal-content">
+      <nz-range-picker style="width: 100%;" [(ngModel)]="date" (ngModelChange)="onChange($event)"></nz-range-picker>
+    </div>
+  </ng-container>
+</nz-modal>
+<!-- Main Content -->
+<nz-layout>
+  <nz-content class="content">
+    <router-outlet></router-outlet> <!-- Displays components based on the route -->
+  </nz-content>
+  <nz-footer class="footer">
+    <div class="footer-content">
+      <p>© 2024 ESTSB Hotel. All rights reserved.</p>
+      <p>
+        <strong>Contact Us:</strong><br />
+        Phone: <a href="tel:+212123456789">0642142455</a><br />
+        Email: <a href="mailto:contact@estsbhotel.com">abdochtouki88@gmail.com</a><br />
+      </p>
+      <p>
+        <strong>Location:</strong><br />
+        Avenue far, SIDI BENNOUR City, Morocco<br />
+        <img
+          src="../../../../../assets/local.jpg"
+          alt="ESTSB Hotel Location"
+          style="width: 100%; max-width: 300px; margin-top: 10px;"
+        />
+      </p>
+    </div>
+  </nz-footer>
+</nz-layout>

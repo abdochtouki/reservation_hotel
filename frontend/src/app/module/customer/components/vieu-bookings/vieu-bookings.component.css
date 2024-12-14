@@ -1,0 +1,96 @@
+
+ .center-form {
+   width: 90%;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+   background-color: #f9f9f9;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ }
+
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.styled-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.styled-table td {
+  background-color: #fff;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination .ant-pagination {
+  display: inline-block;
+  padding: 10px 0;
+}
+
+nz-tag {
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+.ant-pagination-item {
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.ant-pagination-item-active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.ant-pagination-prev,
+.ant-pagination-next {
+  font-size: 16px;
+}
+ /* Style de la cellule contenant les actions */
+ .action-cell {
+   text-align: center; /* Centrer le contenu dans la cellule */
+   vertical-align: middle;
+   padding: 10px;
+   background-color: #fdfdfd; /* Légère couleur de fond */
+ }
+
+ /* Style du bouton d'annulation */
+ .cancel-btn {
+   color: #ff4d4f; /* Couleur rouge pour indiquer une action de suppression */
+   font-size: 1.2rem;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .cancel-btn:hover {
+   color: #ff7875; /* Couleur plus claire au survol */
+   background-color: rgba(255, 77, 79, 0.1); /* Légère mise en évidence */
+ }
+
+ .cancel-btn:disabled {
+   color: #d9d9d9; /* Griser le bouton lorsqu'il est désactivé */
+   cursor: not-allowed;
+   background-color: transparent;
+   border: none;
+ }

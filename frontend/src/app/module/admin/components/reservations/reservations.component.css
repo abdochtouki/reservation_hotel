@@ -1,0 +1,98 @@
+/* Général */
+.center-form {
+  margin: 20px auto;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 600px;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.styled-table th {
+  background-color: #f4f4f4;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.styled-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Status Tags */
+.nz-tag {
+  font-weight: 600;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.nz-pagination {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Taille des icônes d'action */
+.icon {
+  font-size: 24px;  /* Ajustez cette valeur selon vos besoins */
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .center-form {
+    padding: 15px;
+    margin: 10px;
+  }
+
+  .page-title {
+    font-size: 24px;
+  }
+
+  .styled-table th,
+  .styled-table td {
+    padding: 8px;
+  }
+
+  .pagination {
+    flex-direction: column;
+  }
+}

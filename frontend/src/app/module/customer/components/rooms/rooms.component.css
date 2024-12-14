@@ -1,0 +1,150 @@
+/* Global font settings */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Police moderne et lisible */
+  font-size: 16px; /* Taille de base confortable */
+  line-height: 1.6; /* Espacement entre les lignes */
+  color: #333; /* Couleur principale du texte */
+}
+
+/* Center the form container */
+.center-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 18px; /* Légèrement plus grand pour les éléments centraux */
+}
+
+/* Room container styling */
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-style: oblique;/* Police par défaut pour les cartes */
+}
+
+/* Each room card style */
+.room-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Styling the card */
+.nz-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  font-family: 'Roboto', Arial, sans-serif; /* Police homogène pour les cartes */
+}
+
+.nz-card:hover {
+  transform: scale(1.05);
+}
+
+.room-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.room-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.room-text {
+  padding: 10px;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  font-size: 14px; /* Texte légèrement plus petit pour les détails */
+  font-weight: 500; /* Texte lisible sans être trop fin */
+  color: #555; /* Couleur douce pour les descriptions */
+}
+
+/* Styling the action icon */
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #1890ff;
+}
+
+/* Pagination styling */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Modal styling */
+.nz-modal {
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.modal-content {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.nz-range-picker {
+  width: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+/* Button and Input font adjustments */
+button, input, select, textarea {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+}
+
+button {
+  font-weight: bold;
+}
+
+
+
+
+
+
+.footer {
+  background-color: #f8f9fa; /* Couleur de fond douce */
+  padding: 20px; /* Espacement intérieur */
+  text-align: center; /* Centrer le texte */
+  border-top: 1px solid #e9ecef; /* Bordure supérieure */
+}
+
+.footer-content {
+  max-width: 800px; /* Largeur maximale pour le contenu */
+  margin: 0 auto; /* Centrer le contenu */
+  color: #343a40; /* Couleur du texte */
+}
+
+.footer-content p {
+  margin: 10px 0; /* Espacement entre les paragraphes */
+}
+
+.footer-content a {
+  color: #007bff; /* Couleur des liens */
+  text-decoration: none; /* Supprimer le soulignement */
+}
+
+.footer-content a:hover {
+  text-decoration: underline; /* Souligner au survol */
+}
+
+.footer-content img {
+  border-radius: 8px; /* Coins arrondis pour l'image */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}

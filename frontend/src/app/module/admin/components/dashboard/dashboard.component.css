@@ -1,0 +1,49 @@
+.center-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.post-room-btn {
+  margin-bottom: 20px;
+}
+
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 16px;
+  font-style: oblique;
+}
+
+.room-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.room-image-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.room-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.room-info {
+  text-align: center;
+}
+
+.icon {
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.pagination {
+  margin-top: 20px;
+}
